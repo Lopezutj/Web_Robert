@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primeros Auxilios para Enfermería</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Sidebar Toggle Button (Mobile) -->
+  <button class="sidebar-toggle" id="sidebar-toggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <h1>Primeros Auxilios</h1>
+      </div>
+      <p>Guía para Estudiantes de Enfermería</p>
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item active" data-section="intro">
+        <a href="javascript:void(0)">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </li>
+      <li class="nav-item" data-section="vital">
+        <a href="javascript:void(0)">
+          <i class="fas fa-heartbeat"></i> Soporte Vital Básico
+        </a>
+      </li>
+      <li class="nav-item" data-section="shock">
+        <a href="javascript:void(0)">
+          <i class="fas fa-tint"></i> Shock y Hemorragias
+        </a>
+      </li>
+      <li class="nav-item" data-section="heridas">
+        <a href="javascript:void(0)">
+          <i class="fas fa-band-aid"></i> Heridas
+        </a>
+      </li>
+      <li class="nav-item" data-section="fracturas">
+        <a href="javascript:void(0)">
+          <i class="fas fa-bone"></i> Fracturas
+        </a>
+      </li>
+      <li class="nav-item" data-section="quemaduras">
+        <a href="javascript:void(0)">
+          <i class="fas fa-fire"></i> Quemaduras
+        </a>
+      </li>
+      <li class="nav-item" data-section="rcp">
+        <a href="javascript:void(0)">
+          <i class="fas fa-hands-helping"></i> RCP Básico
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="content-area" id="content-area">
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loading-indicator">
+      <div class="loading-spinner"></div>
+      <p>Cargando contenido...</p>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="section-content section-active" id="intro-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Bienvenido al Manual de Primeros Auxilios</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>Este recurso educativo está diseñado para estudiantes de enfermería que buscan aprender o reforzar sus conocimientos en primeros auxilios. Encontrarás información detallada, procedimientos paso a paso, y recursos visuales que te ayudarán a comprender mejor estas técnicas esenciales para salvar vidas.</p>
+        <p>Explora las diferentes secciones utilizando el menú lateral para acceder a cada tema específico.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3><i class="fas fa-info-circle"></i> Acerca de este recurso</h3>
+            <p>Este manual interactivo contiene información actualizada siguiendo los protocolos internacionales de primeros auxilios y reanimación. Cada sección ha sido diseñada con un enfoque práctico y educativo, incluyendo:</p>
+            <ul>
+              <li>Explicaciones claras y concisas</li>
+              <li>Procedimientos paso a paso</li>
+              <li>Imágenes y diagramas ilustrativos</li>
+              <li>Visualizaciones 3D para mejor comprensión</li>
+              <li>Consejos prácticos para situaciones reales</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="info-card">
+            <h3><i class="fas fa-exclamation-triangle"></i> Importante</h3>
+            <p>Si bien este recurso es educativo y actualizado, recuerda que:</p>
+            <ul>
+              <li>No reemplaza la formación práctica supervisada</li>
+              <li>Los protocolos pueden variar según la región o institución</li>
+              <li>En caso de emergencia real, siempre prioriza solicitar ayuda profesional</li>
+              <li>Mantente actualizado con las guías más recientes de tu institución sanitaria</li>
+            </ul>
+            <p class="mt-3"><strong>La práctica regular y la actualización continua son fundamentales para mantener las competencias en primeros auxilios.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3><i class="fas fa-book-open"></i> Cómo utilizar este manual</h3>
+            <p>Navega por las diferentes secciones utilizando el menú lateral. Cada tema incluye:</p>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                    <h5>Fundamentos teóricos</h5>
+                    <p class="card-text">Conocimientos esenciales y conceptos básicos</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="fas fa-list-ol fa-3x text-primary mb-3"></i>
+                    <h5>Procedimientos</h5>
+                    <p class="card-text">Instrucciones paso a paso ilustradas</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="fas fa-cube fa-3x text-primary mb-3"></i>
+                    <h5>Recursos visuales</h5>
+                    <p class="card-text">Imágenes, diagramas y modelos 3D</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soporte Vital Básico Section -->
+    <div class="section-content" id="vital-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Soporte Vital Básico</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>El soporte vital básico (SVB) comprende un conjunto de conocimientos y habilidades que permiten identificar a las víctimas con posible parada cardíaca, alertar a los sistemas de emergencia y realizar una sustitución de las funciones respiratoria y circulatoria, hasta que la víctima pueda recibir tratamiento cualificado.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3>Principios de Emergencia</h3>
+            <p>Antes de iniciar cualquier intervención en una emergencia, es fundamental seguir estos principios básicos:</p>
+            
+            <div class="alert-box">
+              <h4><i class="fas fa-shield-alt"></i> PROTEGER</h4>
+              <p>Evalúa la seguridad del entorno antes de actuar. Nunca te expongas a peligros que puedan convertirte en otra víctima.</p>
+            </div>
+            
+            <div class="alert-box">
+              <h4><i class="fas fa-phone"></i> ALERTAR</h4>
+              <p>Activa inmediatamente el sistema de emergencias local (911 en América). Proporciona información clara sobre la ubicación y estado de la víctima.</p>
+            </div>
+            
+            <div class="alert-box">
+              <h4><i class="fas fa-hands-helping"></i> SOCORRER</h4>
+              <p>Proporciona la ayuda necesaria según la situación, siguiendo los protocolos establecidos y dentro de tus posibilidades.</p>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Evaluación de la Escena</h3>
+            <p>Antes de aproximarte a la víctima, realiza una evaluación rápida del entorno:</p>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Identificar peligros</h4>
+                <p>Observa el entorno en busca de riesgos como tráfico, cables eléctricos, estructuras inestables, sustancias tóxicas o personas hostiles.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Determinar el mecanismo de lesión</h4>
+                <p>Identifica qué pudo haber causado el incidente (caída, accidente de tráfico, etc.) para anticipar posibles lesiones.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Contar el número de víctimas</h4>
+                <p>Determina cuántas personas requieren atención para solicitar los recursos necesarios.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Identificar recursos disponibles</h4>
+                <p>Busca personas que puedan ayudar, equipo de primeros auxilios disponible, o profesionales sanitarios presentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3>Evaluación del Paciente</h3>
+            <p>Una evaluación sistemática permite identificar rápidamente problemas que amenazan la vida:</p>
+            
+            <h4 class="mt-4 mb-3">Evaluación Primaria (ABCDE)</h4>
+            <table class="custom-table">
+              <tr>
+                <th>Componente</th>
+                <th>Acción</th>
+              </tr>
+              <tr>
+                <td><strong>A - Vía Aérea</strong></td>
+                <td>Comprueba que la vía aérea está permeable y libre de obstrucciones.</td>
+              </tr>
+              <tr>
+                <td><strong>B - Respiración</strong></td>
+                <td>Observa, escucha y siente la respiración durante 10 segundos.</td>
+              </tr>
+              <tr>
+                <td><strong>C - Circulación</strong></td>
+                <td>Verifica pulso y signos de circulación. Controla hemorragias severas.</td>
+              </tr>
+              <tr>
+                <td><strong>D - Discapacidad</strong></td>
+                <td>Evalúa nivel de consciencia (AVDN: Alerta, respuesta Verbal, respuesta al Dolor, No responde).</td>
+              </tr>
+              <tr>
+                <td><strong>E - Exposición</strong></td>
+                <td>Expón áreas necesarias para evaluar lesiones, protegiendo la dignidad y temperatura del paciente.</td>
+              </tr>
+            </table>
+            
+            <h4 class="mt-4 mb-3">Evaluación Secundaria</h4>
+            <p>Una vez estabilizada la persona, realiza una exploración sistemática de cabeza a pies:</p>
+            <ul>
+              <li>Cabeza y cuello: busca lesiones, deformidades o hemorragias</li>
+              <li>Tórax: evalúa expansión simétrica y posibles heridas</li>
+              <li>Abdomen: busca signos de rigidez, dolor o hemorragia interna</li>
+              <li>Pelvis: comprueba estabilidad con precaución</li>
+              <li>Extremidades: evalúa movilidad, sensibilidad y pulsos distales</li>
+              <li>Espalda: examina manteniendo la alineación de la columna</li>
+            </ul>
+          </div>
+
+          <div class="model-viewer-container" data-aos="fade-up" data-aos-delay="500">
+            <div class="model-placeholder">
+              <i class="fas fa-cube fa-3x mb-3"></i>
+              <p>Modelo 3D interactivo de posición lateral de seguridad</p>
+              <p class="text-muted">Prototipo - Modelo 3D se cargará en la versión final</p>
+            </div>
+          </div>
+          
+          <div class="image-gallery" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://i.postimg.cc/02q0DxcR/Evaluacion-Paciente.jpg" alt="Evaluación del paciente" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2019/05/27/23/13/caretaker-4233468_1280.jpg" alt="Comprobación de respiración" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2018/05/07/22/21/ambulance-3381752_1280.jpg" alt="Servicio de emergencias" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shock y Hemorragias Section -->
+    <div class="section-content" id="shock-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Shock y Hemorragias</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>El shock es una afección potencialmente mortal que ocurre cuando el cuerpo no está recibiendo suficiente flujo sanguíneo, lo que priva a los órganos de oxígeno y nutrientes esenciales. Las hemorragias significativas son una causa común de shock y requieren atención inmediata.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3>Tipos de Shock</h3>
+            <p>Hay varios tipos de shock, cada uno con causas y características específicas:</p>
+            
+            <table class="custom-table">
+              <tr>
+                <th>Tipo</th>
+                <th>Causas</th>
+                <th>Características</th>
+              </tr>
+              <tr>
+                <td><strong>Hipovolémico</strong></td>
+                <td>Hemorragias, quemaduras, diarrea severa</td>
+                <td>Piel fría y pálida, sed intensa, hipotensión</td>
+              </tr>
+              <tr>
+                <td><strong>Cardiogénico</strong></td>
+                <td>Infarto de miocardio, insuficiencia cardíaca</td>
+                <td>Dolor torácico, disnea, edema pulmonar</td>
+              </tr>
+              <tr>
+                <td><strong>Distributivo</strong></td>
+                <td>Sepsis, anafilaxia, neurológico</td>
+                <td>En anafilaxia: urticaria, edema, dificultad respiratoria</td>
+              </tr>
+              <tr>
+                <td><strong>Obstructivo</strong></td>
+                <td>Neumotórax a tensión, taponamiento cardíaco</td>
+                <td>Ingurgitación yugular, hipotensión, taquicardia</td>
+              </tr>
+            </table>
+
+            <div class="alert-box warning mt-4">
+              <h4><i class="fas fa-exclamation-triangle"></i> Signos y síntomas generales de shock</h4>
+              <ul>
+                <li>Piel pálida, fría y sudorosa</li>
+                <li>Pulso débil y rápido</li>
+                <li>Respiración superficial y rápida</li>
+                <li>Presión arterial baja</li>
+                <li>Estado mental alterado (confusión, agitación, letargo)</li>
+                <li>Náuseas o vómitos</li>
+                <li>Sed intensa</li>
+                <li>Debilidad o mareo</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Tratamiento del Shock</h3>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Reconocer los signos</h4>
+                <p>Identificar precozmente los signos de shock es fundamental para iniciar el tratamiento.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Llamar a emergencias</h4>
+                <p>Contacta inmediatamente con los servicios médicos de emergencia.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Posición del paciente</h4>
+                <p>Coloca a la persona en posición supina (boca arriba) y eleva las piernas 30cm, excepto si hay trauma craneal, dificultad respiratoria o sospecha de fractura pélvica.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Control de hemorragias</h4>
+                <p>Detén cualquier sangrado visible aplicando presión directa.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Mantener temperatura</h4>
+                <p>Cubre al paciente para prevenir la pérdida de calor y abrigarlo si es necesario.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Monitorización continua</h4>
+                <p>Controla constantemente los signos vitales y nivel de consciencia hasta la llegada de los profesionales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3>Hemorragias</h3>
+            <p>Las hemorragias se clasifican según el tipo de vaso sanguíneo afectado y si son externas o internas:</p>
+            
+            <h4 class="mt-3">Tipos de hemorragias según vaso afectado:</h4>
+            <ul>
+              <li><strong>Arterial:</strong> Sangre roja brillante que sale a borbotones o pulsos, sincronizada con el latido cardíaco</li>
+              <li><strong>Venosa:</strong> Sangre rojo oscuro que fluye de manera constante</li>
+              <li><strong>Capilar:</strong> Sangrado superficial en forma de "goteo"</li>
+            </ul>
+
+            <h4 class="mt-4">Métodos de contención de hemorragias</h4>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Presión directa</h4>
+                <p>Aplica presión firme y continua sobre la herida con gasas o tela limpia durante al menos 10-15 minutos. Si las gasas se empapan, no las retires; añade más encima.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Elevación</h4>
+                <p>Eleva la extremidad afectada por encima del nivel del corazón, siempre que no haya fracturas, para reducir el flujo sanguíneo hacia la zona.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Puntos de presión</h4>
+                <p>Presiona las arterias principales que irrigan la zona: arteria braquial para hemorragias en el brazo y arteria femoral para hemorragias en la pierna.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Torniquete (último recurso)</h4>
+                <p>Solo si la hemorragia es severa y no se controla con los métodos anteriores. Coloca una banda ancha 5-7cm por encima de la herida (no sobre articulaciones). Anota la hora de colocación.</p>
+              </div>
+            </div>
+
+            <div class="alert-box danger mt-4">
+              <h4><i class="fas fa-exclamation-circle"></i> Precauciones con torniquetes</h4>
+              <ul>
+                <li>Úsalo solo en situaciones de emergencia con hemorragias masivas que amenacen la vida</li>
+                <li>Nunca lo ocultes bajo ropa</li>
+                <li>No lo aflojes una vez colocado</li>
+                <li>Marca con una "T" en la frente del paciente para indicar que lleva un torniquete</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>Hemorragias Internas</h3>
+            <p>Las hemorragias internas no son visibles y pueden ser especialmente peligrosas porque son difíciles de detectar.</p>
+            
+            <h4 class="mt-3">Signos sugestivos de hemorragia interna:</h4>
+            <ul>
+              <li>Dolor, sensibilidad o hinchazón en la zona afectada</li>
+              <li>Rigidez abdominal o abdominalgia</li>
+              <li>Hematomas extensos</li>
+              <li>Vómitos con sangre (hematemesis) o heces negras (melenas)</li>
+              <li>Signos de shock sin hemorragia externa visible</li>
+              <li>Historia de traumatismo reciente</li>
+            </ul>
+
+            <div class="alert-box mt-4">
+              <h4><i class="fas fa-first-aid"></i> Actuación ante sospecha de hemorragia interna</h4>
+              <ol>
+                <li>Considera siempre las hemorragias internas en traumatismos importantes</li>
+                <li>Llama inmediatamente a los servicios de emergencia</li>
+                <li>Mantén al paciente en reposo absoluto</li>
+                <li>No administres alimentos ni líquidos</li>
+                <li>Monitoriza constantemente los signos vitales</li>
+                <li>Trata los signos de shock según lo indicado anteriormente</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="image-gallery" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://cdn.pixabay.com/photo/2019/05/13/15/31/first-aid-4200789_1280.jpg" alt="Control de hemorragia" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2016/05/18/07/18/operating-theatre-1399846_1280.jpg" alt="Instrumentos médicos" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2016/11/08/05/15/surgery-1807541_1280.jpg" alt="Personal médico" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heridas Section -->
+    <div class="section-content" id="heridas-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Heridas</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>Las heridas son lesiones que provocan una interrupción en la continuidad de los tejidos corporales, generalmente causadas por acción de agentes externos. Su adecuada valoración y tratamiento es fundamental para prevenir complicaciones como infecciones o retrasos en la cicatrización.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3>Clasificación de las Heridas</h3>
+            <p>Las heridas pueden clasificarse según diferentes criterios:</p>
+            
+            <h4 class="mt-3">Según su mecanismo de producción:</h4>
+            <ul>
+              <li><strong>Heridas incisas o cortantes:</strong> Producidas por objetos afilados, con bordes limpios y bien definidos.</li>
+              <li><strong>Heridas contusas:</strong> Causadas por impacto con objetos romos, con bordes irregulares y tejido dañado.</li>
+              <li><strong>Heridas punzantes:</strong> Producidas por objetos puntiagudos, con pequeña apertura exterior pero posible daño profundo.</li>
+              <li><strong>Heridas lacerantes:</strong> Desgarros de tejidos con bordes irregulares y traumatismo en los tejidos adyacentes.</li>
+              <li><strong>Abrasiones:</strong> Raspado de la capa superficial de la piel.</li>
+              <li><strong>Avulsiones:</strong> Arrancamiento parcial o total de un tejido.</li>
+              <li><strong>Amputaciones:</strong> Separación completa de una parte del cuerpo.</li>
+            </ul>
+
+            <h4 class="mt-4">Según el grado de contaminación:</h4>
+            <ul>
+              <li><strong>Heridas limpias:</strong> No infectadas, inflamación mínima.</li>
+              <li><strong>Heridas limpias-contaminadas:</strong> Sin evidencia de infección pero con mayor riesgo.</li>
+              <li><strong>Heridas contaminadas:</strong> Heridas abiertas, recientes, accidentales.</li>
+              <li><strong>Heridas sucias o infectadas:</strong> Con tejido desvitalizado o signos de infección clínica.</li>
+            </ul>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Evaluación de Heridas Graves</h3>
+            
+            <div class="alert-box warning">
+              <h4><i class="fas fa-exclamation-triangle"></i> Signos de gravedad</h4>
+              <p>Considera una herida como grave si presenta alguna de estas características:</p>
+              <ul>
+                <li>Hemorragia abundante que no cede con presión</li>
+                <li>Afecta a estructuras profundas (tendones, músculos, nervios, vasos)</li>
+                <li>Contiene cuerpos extraños</li>
+                <li>Presenta signos de infección (enrojecimiento, calor, dolor, pus)</li>
+                <li>Causada por mordeduras humanas o animales</li>
+                <li>Heridas punzantes profundas</li>
+                <li>Amputaciones o avulsiones importantes</li>
+                <li>Heridas faciales extensas o con riesgo de deformidad</li>
+              </ul>
+            </div>
+
+            <div class="model-viewer-container mt-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="model-placeholder">
+                <i class="fas fa-cube fa-3x mb-3"></i>
+                <p>Modelo 3D de tipos de heridas</p>
+                <p class="text-muted">Prototipo - Modelo 3D se cargará en la versión final</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3>Tratamiento de Heridas</h3>
+            <p>El manejo adecuado de las heridas sigue estos pasos fundamentales:</p>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Preparación y protección</h4>
+                <p>Lávate las manos con agua y jabón o usa guantes. Prepara el material necesario: gasas estériles, antiséptico, solución salina, vendajes.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Control de hemorragia</h4>
+                <p>Aplica presión directa sobre la herida con gasas estériles. Eleva la zona si es posible.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Limpieza de la herida</h4>
+                <p>Irriga abundantemente con solución salina o agua potable a presión moderada para eliminar cuerpos extraños y reducir la contaminación bacteriana.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Desinfección</h4>
+                <p>Aplica antiséptico desde el centro hacia la periferia, preferiblemente clorhexidina o povidona yodada, evitando productos colorantes si la herida requerirá evaluación médica posterior.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Cierre y protección</h4>
+                <p>Cubre con gasas estériles y fija con vendaje o esparadrapo. En heridas graves, no intentes cerrarlas; mantén cubiertas y busca atención médica.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Evaluación posterior</h4>
+                <p>Vigila signos de infección: aumento de dolor, enrojecimiento, calor, supuración o fiebre. Revisa el estado de la vacunación antitetánica.</p>
+              </div>
+            </div>
+
+            <div class="alert-box mt-4">
+              <h4><i class="fas fa-info-circle"></i> Heridas que requieren atención médica inmediata</h4>
+              <ul>
+                <li>Heridas profundas o extensas (mayores de 1-2 cm)</li>
+                <li>Heridas con bordes muy separados</li>
+                <li>Heridas en cara, manos o articulaciones</li>
+                <li>Heridas punzantes profundas</li>
+                <li>Heridas con tejido desvitalizado o muy contaminadas</li>
+                <li>Mordeduras (humanas o animales)</li>
+                <li>Heridas con cuerpos extraños que no pueden extraerse fácilmente</li>
+                <li>Heridas en pacientes con factores de riesgo (inmunosupresión, diabetes)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>Manejo de Casos Especiales</h3>
+            
+            <h4 class="mb-3">Amputaciones</h4>
+            <p>En caso de amputación traumática completa o incompleta:</p>
+            <ol>
+              <li>Controla la hemorragia con presión directa y elevación</li>
+              <li>Conserva la parte amputada:
+                <ul>
+                  <li>Envuélvela en gasas estériles ligeramente humedecidas con solución salina</li>
+                  <li>Colócala en una bolsa de plástico sellada</li>
+                  <li>Introduce la bolsa en un recipiente con hielo (sin contacto directo entre el hielo y el tejido)</li>
+                </ul>
+              </li>
+              <li>Traslada urgentemente al paciente y la parte amputada a un centro hospitalario</li>
+            </ol>
+
+            <h4 class="mt-4 mb-3">Cuerpos extraños</h4>
+            <p>Si hay objetos enclavados (clavos, fragmentos, etc.):</p>
+            <ul>
+              <li>NO intentes extraer objetos grandes o profundamente enclavados</li>
+              <li>Estabiliza el objeto con vendajes o gasas alrededor para evitar movimientos</li>
+              <li>Corta el vendaje si es necesario para acomodar el objeto</li>
+              <li>Traslada urgentemente para atención especializada</li>
+            </ul>
+          </div>
+
+          <div class="image-gallery" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://cdn.pixabay.com/photo/2014/12/10/20/56/medical-563427_1280.jpg" alt="Material para cura de heridas" class="gallery-image">
+            <img src="https://i.postimg.cc/BZpdwhyz/vendaje.jpg" alt="Vendaje de heridas" class="gallery-image">
+            <img src="https://i.postimg.cc/P5Q3PNjR/Kid-Primero-Auxilios.jpg" alt="Kit de primeros auxilios" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fracturas Section -->
+    <div class="section-content" id="fracturas-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Fracturas</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>Una fractura es la pérdida de continuidad normal de la sustancia ósea. La gravedad de la fractura depende del hueso afectado, el tipo de fractura, si hay o no desplazamiento, y si se trata de una fractura abierta o cerrada. El manejo adecuado de las fracturas es crucial para prevenir complicaciones y asegurar una correcta recuperación.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3>Tipos de Fracturas</h3>
+            <p>Las fracturas se pueden clasificar de diferentes formas:</p>
+            
+            <h4 class="mt-3">Según su relación con el exterior:</h4>
+            <ul>
+              <li><strong>Fracturas cerradas:</strong> La piel que recubre la fractura está intacta.</li>
+              <li><strong>Fracturas abiertas:</strong> Existe una herida que comunica la fractura con el exterior, con riesgo de infección y complicaciones.</li>
+            </ul>
+
+            <h4 class="mt-3">Según el trazo de fractura:</h4>
+            <table class="custom-table">
+              <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+              </tr>
+              <tr>
+                <td><strong>Transversal</strong></td>
+                <td>La línea de fractura es perpendicular al eje longitudinal del hueso</td>
+              </tr>
+              <tr>
+                <td><strong>Oblicua</strong></td>
+                <td>La línea de fractura forma un ángulo con el eje del hueso</td>
+              </tr>
+              <tr>
+                <td><strong>Espiroidea</strong></td>
+                <td>La línea de fractura tiene forma de espiral alrededor del hueso</td>
+              </tr>
+              <tr>
+                <td><strong>Conminuta</strong></td>
+                <td>El hueso está fragmentado en múltiples trozos</td>
+              </tr>
+              <tr>
+                <td><strong>Por compresión</strong></td>
+                <td>El hueso se aplasta, común en vértebras</td>
+              </tr>
+              <tr>
+                <td><strong>Por avulsión</strong></td>
+                <td>Un fragmento de hueso es arrancado por un tendón o ligamento</td>
+              </tr>
+            </table>
+
+            <div class="alert-box mt-4">
+              <h4><i class="fas fa-search"></i> Signos y síntomas de fractura</h4>
+              <p>Para identificar una posible fractura, busca estos signos y síntomas:</p>
+              <ul>
+                <li>Dolor intenso, que aumenta con el movimiento</li>
+                <li>Inflamación y hematoma en la zona afectada</li>
+                <li>Deformidad visible</li>
+                <li>Movilidad anormal</li>
+                <li>Crepitación (sensación o sonido de roce entre fragmentos óseos)</li>
+                <li>Impotencia funcional (incapacidad para usar la extremidad)</li>
+                <li>En caso de fractura abierta, herida con posible exposición ósea</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="model-viewer-container" data-aos="fade-up" data-aos-delay="300">
+            <div class="model-placeholder">
+              <i class="fas fa-cube fa-3x mb-3"></i>
+              <p>Modelo 3D de tipos de fracturas</p>
+              <p class="text-muted">Prototipo - Modelo 3D se cargará en la versión final</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3>Tratamiento de Fracturas</h3>
+            <p>El objetivo principal del tratamiento inicial es inmovilizar la fractura para prevenir daños adicionales y aliviar el dolor hasta recibir atención médica especializada.</p>
+            
+            <h4 class="mt-3">Principios generales de actuación:</h4>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Evaluación inicial</h4>
+                <p>Evalúa la zona siguiendo el protocolo ABCDE. Comprueba pulsos distales, sensibilidad y movilidad para detectar posible afectación neurovascular.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>No mover innecesariamente</h4>
+                <p>Evita manipulaciones innecesarias que puedan agravar la lesión o causar más dolor.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>No intentar reducir la fractura</h4>
+                <p>Nunca intentes "colocar" el hueso en su sitio. Esta maniobra debe realizarla personal médico especializado.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Inmovilización</h4>
+                <p>Inmoviliza la fractura incluyendo las articulaciones por encima y por debajo de la lesión. Utiliza férulas rígidas, improvisadas o comerciales.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Fracturas abiertas</h4>
+                <p>Cubre la herida con gasas estériles antes de inmovilizar. No introduzcas fragmentos óseos visibles. No apliques presión directa sobre el hueso expuesto.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Evaluación continua</h4>
+                <p>Monitoriza periódicamente el pulso, la sensibilidad y la coloración distal para detectar complicaciones.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>Técnicas de Inmovilización</h3>
+            
+            <h4 class="mt-3">Inmovilización de miembros superiores:</h4>
+            <ul>
+              <li><strong>Cabestrillo improvisado:</strong> Útil para fracturas de antebrazo, muñeca o mano. Puede utilizarse un pañuelo triangular o una prenda.</li>
+              <li><strong>Férulas rígidas:</strong> Pueden ser comerciales o improvisadas con materiales rígidos (tablas, revistas enrolladas). Deben acolcharse para prevenir lesiones.</li>
+              <li><strong>Vendaje en ocho:</strong> Para fracturas de clavícula, pasando alrededor de ambos hombros y cruzando en la espalda.</li>
+            </ul>
+
+            <h4 class="mt-3">Inmovilización de miembros inferiores:</h4>
+            <ul>
+              <li><strong>Férulas rígidas:</strong> A ambos lados de la extremidad, desde más allá de la articulación superior hasta más allá de la inferior.</li>
+              <li><strong>Férula de tracción:</strong> Para fracturas de fémur (requiere formación específica).</li>
+              <li><strong>Inmovilización anatómica:</strong> Unir la pierna lesionada a la sana utilizando vendas, cinturones o ropa.</li>
+            </ul>
+
+            <div class="alert-box warning mt-4">
+              <h4><i class="fas fa-exclamation-triangle"></i> Precauciones importantes</h4>
+              <ul>
+                <li>No aflojes ni retires la inmovilización una vez colocada.</li>
+                <li>Retira anillos, pulseras y relojes antes de que aparezca inflamación.</li>
+                <li>Eleva la extremidad para reducir la inflamación.</li>
+                <li>Aplica frío local (hielo envuelto en un paño) durante 15-20 minutos cada 1-2 horas.</li>
+                <li>Comprueba periódicamente la circulación (pulso, color, temperatura, sensibilidad).</li>
+                <li>Ante cualquier signo de compromiso neurovascular, busca ayuda médica inmediata.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="image-gallery" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/12/46/first-aid-160116_1280.png" alt="Inmovilización de brazo" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2016/09/07/11/43/leg-1651844_1280.png" alt="Férula en pierna" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2017/09/07/19/38/first-aid-2726746_1280.jpg" alt="Material de inmovilización" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quemaduras Section -->
+    <div class="section-content" id="quemaduras-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Quemaduras</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>Las quemaduras son lesiones de los tejidos blandos causadas por agentes físicos (calor, frío, radiación, electricidad) o químicos. La severidad de una quemadura depende de su profundidad, extensión y localización, así como de la edad y estado de salud del paciente. Un manejo adecuado y oportuno puede marcar una gran diferencia en el pronóstico.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3>Tipos de Quemaduras</h3>
+            <p>Las quemaduras se clasifican según su profundidad en:</p>
+            
+            <table class="custom-table">
+              <tr>
+                <th>Grado</th>
+                <th>Características</th>
+                <th>Apariencia</th>
+              </tr>
+              <tr>
+                <td><strong>Primer grado<br>(Superficial)</strong></td>
+                <td>Afecta solo a la epidermis<br>Dolor, enrojecimiento<br>Curación en 7-10 días sin cicatriz</td>
+                <td>Piel enrojecida, levemente inflamada, sensible al tacto</td>
+              </tr>
+              <tr>
+                <td><strong>Segundo grado<br>(Espesor parcial)</strong></td>
+                <td>Afecta epidermis y parte de dermis<br>Muy dolorosa<br>Formación de ampollas<br>Curación en 2-4 semanas</td>
+                <td>Piel roja, ampollas, aspecto húmedo, blanquea a la presión</td>
+              </tr>
+              <tr>
+                <td><strong>Tercer grado<br>(Espesor total)</strong></td>
+                <td>Destrucción completa de epidermis y dermis<br>Afecta tejidos subyacentes<br>Poco dolorosa por destrucción de terminaciones nerviosas<br>Requiere intervención quirúrgica</td>
+                <td>Aspecto carbonizado, céreo, blanco o marrón<br>No blanquea a la presión<br>Textura seca y dura</td>
+              </tr>
+              <tr>
+                <td><strong>Cuarto grado<br>(Profunda)</strong></td>
+                <td>Afecta estructuras profundas: músculos, tendones, huesos<br>Destrucción tisular extensa<br>Pronóstico grave</td>
+                <td>Aspecto carbonizado o ennegrecido<br>Tejidos profundos visibles</td>
+              </tr>
+            </table>
+
+            <h4 class="mt-4">Agentes causales:</h4>
+            <ul>
+              <li><strong>Térmicas:</strong> Llama, líquidos calientes, vapor, contacto con objetos calientes</li>
+              <li><strong>Químicas:</strong> Ácidos, álcalis, disolventes orgánicos</li>
+              <li><strong>Eléctricas:</strong> Corriente eléctrica (doméstica o alta tensión)</li>
+              <li><strong>Radiación:</strong> Solar, radiaciones ionizantes</li>
+              <li><strong>Frío:</strong> Congelación</li>
+            </ul>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Factores de Gravedad</h3>
+            <p>Además del grado, otros factores determinan la gravedad de una quemadura:</p>
+            
+            <h4 class="mt-3">Extensión:</h4>
+            <p>Se calcula mediante la "Regla de los 9" o la "Regla de la palma":</p>
+            <ul>
+              <li><strong>Regla de los 9 (adultos):</strong>
+                <ul>
+                  <li>Cabeza y cuello: 9%</li>
+                  <li>Cada miembro superior: 9%</li>
+                  <li>Cara anterior del tórax y abdomen: 18%</li>
+                  <li>Espalda y nalgas: 18%</li>
+                  <li>Cada miembro inferior: 18%</li>
+                  <li>Genitales: 1%</li>
+                </ul>
+              </li>
+              <li><strong>Regla de la palma:</strong> La palma de la mano del paciente (con dedos juntos) representa aproximadamente el 1% de su superficie corporal.</li>
+            </ul>
+
+            <h4 class="mt-3">Localización:</h4>
+            <p>Son de especial gravedad las quemaduras en:</p>
+            <ul>
+              <li>Cara, cuello y vías respiratorias</li>
+              <li>Manos y pies</li>
+              <li>Genitales y periné</li>
+              <li>Articulaciones</li>
+              <li>Circunferenciales (rodean completamente una extremidad)</li>
+            </ul>
+
+            <h4 class="mt-3">Factores del paciente:</h4>
+            <ul>
+              <li>Edad: mayor gravedad en niños pequeños y ancianos</li>
+              <li>Enfermedades previas: diabetes, cardiopatías, inmunosupresión</li>
+              <li>Lesiones asociadas: fracturas, traumatismos</li>
+            </ul>
+
+            <div class="alert-box danger mt-4">
+              <h4><i class="fas fa-ambulance"></i> Criterios de derivación hospitalaria</h4>
+              <p>Requieren atención médica urgente las quemaduras:</p>
+              <ul>
+                <li>De segundo grado >10% de superficie corporal</li>
+                <li>De tercer grado de cualquier extensión</li>
+                <li>Eléctricas y químicas</li>
+                <li>En cara, manos, pies, genitales o articulaciones</li>
+                <li>Circunferenciales</li>
+                <li>Con sospecha de inhalación de humos</li>
+                <li>En pacientes con factores de riesgo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3>Tratamiento de Quemaduras</h3>
+            <p>El manejo inicial de las quemaduras es crucial para minimizar el daño tisular y prevenir complicaciones.</p>
+            
+            <h4 class="mt-3">Primeros auxilios para quemaduras térmicas:</h4>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Garantizar la seguridad</h4>
+                <p>Asegura que el entorno es seguro. Retira a la víctima de la fuente de calor. En caso de incendio, apaga las llamas cubriendo con una manta o haciendo rodar a la persona por el suelo.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Enfriar la quemadura</h4>
+                <p>Aplica agua a temperatura ambiente (no fría ni helada) durante 15-20 minutos. No apliques hielo directamente sobre la quemadura.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Retirar elementos constrictivos</h4>
+                <p>Quita anillos, relojes, pulseras y ropa ajustada (si no está adherida a la quemadura) antes de que aparezca la inflamación.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Cubrir la quemadura</h4>
+                <p>Cubre con apósitos estériles o paños limpios y húmedos. No apliques cremas, ungüentos, aceites ni remedios caseros sobre quemaduras graves.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Elevar la zona</h4>
+                <p>Si es posible, mantén la zona quemada elevada para reducir la inflamación.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Buscar atención médica</h4>
+                <p>Según los criterios de gravedad mencionados anteriormente.</p>
+              </div>
+            </div>
+
+            <div class="alert-box warning mt-4">
+              <h4><i class="fas fa-exclamation-triangle"></i> Lo que NO hacer</h4>
+              <ul>
+                <li>NO aplicar hielo directamente sobre la quemadura</li>
+                <li>NO romper las ampollas</li>
+                <li>NO retirar prendas adheridas a la piel quemada</li>
+                <li>NO aplicar ungüentos, mantequilla, pasta de dientes u otros remedios caseros</li>
+                <li>NO usar algodón directamente sobre la quemadura</li>
+                <li>NO vendar demasiado apretado</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>Casos Especiales</h3>
+            
+            <h4 class="mt-3">Quemaduras químicas:</h4>
+            <ol>
+              <li>Protégete con guantes y equipo adecuado</li>
+              <li>Retira la ropa contaminada</li>
+              <li>Lava abundantemente con agua durante 20-30 minutos (excepto en quemaduras por cal viva, donde primero se debe retirar el polvo en seco)</li>
+              <li>No intentes neutralizar el químico con otro</li>
+              <li>Cubre con apósito estéril</li>
+              <li>Busca atención médica inmediata</li>
+            </ol>
+
+            <h4 class="mt-4">Quemaduras eléctricas:</h4>
+            <ol>
+              <li>Asegúrate de que la fuente eléctrica está desconectada antes de tocar a la víctima</li>
+              <li>Evalúa consciencia y signos vitales; inicia RCP si es necesario</li>
+              <li>Busca puntos de entrada y salida de la corriente</li>
+              <li>Recuerda que el daño interno suele ser mucho mayor que el visible externamente</li>
+              <li>Todas las quemaduras eléctricas requieren evaluación médica</li>
+            </ol>
+
+            <h4 class="mt-4">Quemaduras por inhalación:</h4>
+            <p>Sospechar si la quemadura ocurrió en espacio cerrado, hay quemaduras faciales, vibrisas nasales chamuscadas, esputo carbonáceo o cambios en la voz:</p>
+            <ul>
+              <li>Administra oxígeno si está disponible</li>
+              <li>Coloca al paciente en posición semisentada</li>
+              <li>Monitoriza constantemente la vía aérea</li>
+              <li>Traslado urgente para atención médica</li>
+            </ul>
+
+            <div class="model-viewer-container mt-4" data-aos="fade-up" data-aos-delay="600">
+              <div class="model-placeholder">
+                <i class="fas fa-cube fa-3x mb-3"></i>
+                <p>Modelo 3D de clasificación de quemaduras</p>
+                <p class="text-muted">Prototipo - Modelo 3D se cargará en la versión final</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-gallery" data-aos="fade-up" data-aos-delay="700">
+            <img src="https://cdn.pixabay.com/photo/2015/09/04/23/41/water-923807_1280.jpg" alt="Enfriamiento de quemadura" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/00/32/emergency-2587336_1280.jpg" alt="Material para quemaduras" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2018/01/05/03/14/burn-3062205_1280.jpg" alt="Tratamiento de quemadura" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RCP Básico Section -->
+    <div class="section-content" id="rcp-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2>RCP Básico</h2>
+      </div>
+      <div class="section-description" data-aos="fade-up" data-aos-delay="100">
+        <p>La Reanimación Cardiopulmonar (RCP) básica consiste en mantener la vía aérea permeable, la respiración y la circulación sin utilizar equipos específicos. Es una técnica de emergencia para salvar vidas que se aplica cuando una persona ha dejado de respirar o el corazón ha cesado de palpitar. Su realización precoz es crucial para aumentar las posibilidades de supervivencia.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-card">
+            <h3>Cadena de Supervivencia</h3>
+            <p>La cadena de supervivencia describe la secuencia de acciones que optimizan la supervivencia tras una parada cardiorrespiratoria:</p>
+            
+            <ol class="mt-3">
+              <li><strong>Reconocimiento precoz y pedir ayuda:</strong> Reconocer los signos de parada cardiorrespiratoria y activar el sistema de emergencias.</li>
+              <li><strong>RCP precoz:</strong> Iniciar compresiones torácicas y ventilaciones cuanto antes.</li>
+              <li><strong>Desfibrilación precoz:</strong> Aplicar el desfibrilador externo automático (DEA) tan pronto como esté disponible.</li>
+              <li><strong>Soporte vital avanzado:</strong> Intervención por equipos médicos especializados.</li>
+              <li><strong>Cuidados post-resucitación:</strong> Tratamiento dirigido a preservar la función cerebral y otros órganos.</li>
+            </ol>
+
+            <div class="alert-box mt-4">
+              <h4><i class="fas fa-heartbeat"></i> Importancia del tiempo en la RCP</h4>
+              <p>Por cada minuto que pasa sin RCP, las posibilidades de supervivencia disminuyen entre un 7-10%. Una RCP efectiva puede duplicar o triplicar las probabilidades de supervivencia tras una parada cardíaca.</p>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Reconocimiento de la Parada Cardiorrespiratoria</h3>
+            <p>Para identificar a una persona en parada cardiorrespiratoria:</p>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Comprobar la respuesta</h4>
+                <p>Sacude suavemente a la persona por los hombros y pregunta en voz alta: "¿Se encuentra bien?"</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Abrir la vía aérea</h4>
+                <p>Coloca a la persona boca arriba. Realiza la maniobra frente-mentón: una mano en la frente inclinando la cabeza hacia atrás y dedos de la otra mano bajo el mentón para elevarlo.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Comprobar la respiración</h4>
+                <p>Mantén la vía aérea abierta. Acerca tu mejilla y oído a la boca y nariz de la víctima mientras observas el pecho: VER si el pecho se eleva, OÍR si hay sonidos respiratorios, SENTIR el aliento en tu mejilla. No más de 10 segundos.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Activar el sistema de emergencia</h4>
+                <p>Si no responde y no respira normalmente (o solo jadea/boquea ocasionalmente), pide a alguien que llame a emergencias (112/911) y busque un DEA. Si estás solo, llama tú mismo antes de iniciar la RCP.</p>
+              </div>
+            </div>
+
+            <div class="alert-box warning mt-4">
+              <h4><i class="fas fa-exclamation-triangle"></i> Gasping no es respiración normal</h4>
+              <p>Las boqueadas agónicas o gasping (respiraciones entrecortadas, jadeantes, ruidosas) NO son respiración normal y deben interpretarse como signo de parada cardíaca. ¡Inicia RCP!</p>
+            </div>
+          </div>
+
+          <div class="model-viewer-container" data-aos="fade-up" data-aos-delay="400">
+            <div class="model-placeholder">
+              <i class="fas fa-cube fa-3x mb-3"></i>
+              <p>Modelo 3D interactivo de RCP</p>
+              <p class="text-muted">Prototipo - Modelo 3D se cargará en la versión final</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="info-card">
+            <h3>Secuencia RCP Básica Adultos</h3>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Garantizar la seguridad</h4>
+                <p>Asegúrate de que tú, la víctima y cualquier testigo están seguros.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Iniciar compresiones torácicas</h4>
+                <p>Arrodíllate junto a la víctima. Coloca el talón de una mano en el centro del pecho (mitad inferior del esternón). Coloca el talón de la otra mano sobre la primera. Entrelaza los dedos y asegúrate de no presionar sobre las costillas, el abdomen o el extremo inferior del esternón.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Realizar compresiones de calidad</h4>
+                <ul>
+                  <li>Posiciónate verticalmente sobre el pecho y mantén los brazos rectos</li>
+                  <li>Presiona hasta una profundidad de 5-6 cm (2 pulgadas)</li>
+                  <li>Frecuencia: 100-120 compresiones por minuto</li>
+                  <li>Permite que el pecho se expanda completamente después de cada compresión</li>
+                  <li>No te apoyes en el pecho entre compresiones</li>
+                </ul>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Combinar compresiones y ventilaciones</h4>
+                <p>Después de 30 compresiones, abre la vía aérea con la maniobra frente-mentón y administra 2 ventilaciones de rescate:</p>
+                <ul>
+                  <li>Pinza la nariz con los dedos pulgar e índice</li>
+                  <li>Permite que la boca se abra pero mantén el mentón elevado</li>
+                  <li>Toma una respiración normal y coloca tus labios alrededor de la boca de la víctima sellando completamente</li>
+                  <li>Insufla aire firmemente durante 1 segundo, observando que el pecho se eleva</li>
+                  <li>Mantén la maniobra frente-mentón, sepárate y observa que el pecho desciende</li>
+                  <li>Repite para dar una segunda ventilación efectiva</li>
+                </ul>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Continuar RCP</h4>
+                <p>Alterna 30 compresiones seguidas de 2 ventilaciones. No interrumpas las compresiones durante más de 10 segundos.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Si no puedes/no quieres dar ventilaciones</h4>
+                <p>Realiza RCP con solo compresiones torácicas continuas a un ritmo de 100-120 compresiones por minuto.</p>
+              </div>
+            </div>
+
+            <div class="alert-box mt-4">
+              <h4><i class="fas fa-sync-alt"></i> ¿Hasta cuándo continuar la RCP?</h4>
+              <p>Continúa la RCP hasta que:</p>
+              <ul>
+                <li>Llegue ayuda profesional y se haga cargo</li>
+                <li>La víctima empiece a respirar normalmente</li>
+                <li>Estés físicamente agotado y no puedas continuar</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>Uso del Desfibrilador Externo Automático (DEA)</h3>
+            
+            <div class="procedure-steps">
+              <div class="procedure-step">
+                <h4>Conseguir y encender el DEA</h4>
+                <p>Enciende el dispositivo y sigue sus instrucciones visuales y verbales.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Colocar los parches</h4>
+                <p>Descubre el pecho de la víctima. Coloca los parches adhesivos como se muestra en los diagramas del DEA (uno debajo de la clavícula derecha y otro en el costado izquierdo).</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Análisis del ritmo</h4>
+                <p>Asegúrate de que nadie toca a la víctima durante el análisis. Algunos DEA te pedirán pulsar un botón para iniciar el análisis; otros lo harán automáticamente.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Administrar descarga si está indicada</h4>
+                <p>Si se recomienda una descarga, asegúrate de que nadie toca a la víctima. Di en voz alta "¡Apartarse todos!" y comprueba visualmente que nadie está en contacto con la víctima. Presiona el botón de descarga cuando te lo indique el DEA.</p>
+              </div>
+              
+              <div class="procedure-step">
+                <h4>Reanudar RCP inmediatamente</h4>
+                <p>Tras la descarga, reanuda inmediatamente la RCP comenzando con compresiones torácicas. Continúa según las instrucciones del DEA.</p>
+              </div>
+            </div>
+
+            <div class="alert-box warning mt-4">
+              <h4><i class="fas fa-exclamation-triangle"></i> Situaciones especiales</h4>
+              <p>Ten precaución al usar el DEA en situaciones como:</p>
+              <ul>
+                <li>Víctima mojada: seca el pecho antes de aplicar parches</li>
+                <li>Parches de medicación: retíralos y limpia la zona antes de colocar los parches del DEA</li>
+                <li>Marcapasos o desfibrilador implantado: coloca los parches alejados del dispositivo (al menos 8 cm)</li>
+                <li>Niños menores de 8 años: usa parches pediátricos si están disponibles o modo pediátrico</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="image-gallery" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://cdn.pixabay.com/photo/2018/06/09/17/25/rescue-3464633_1280.jpg" alt="Reanimación cardiopulmonar" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2017/03/31/17/44/heart-2191863_1280.png" alt="Desfibrilador" class="gallery-image">
+            <img src="https://cdn.pixabay.com/photo/2018/04/11/20/03/cpr-3311825_1280.png" alt="Técnica de RCP" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Menu Button -->
+    <button class="back-to-menu" id="back-to-menu">
+      <i class="fas fa-home"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
